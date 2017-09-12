@@ -1,0 +1,39 @@
+<div class="sidebar">
+    <div class="widget">
+        <div class="widget-content">
+            {% include search.html %}
+        </div>
+    </div>
+
+    <div class="widget">
+        <div class="widget-title">
+            Recent Posts
+        </div>
+        <div class="widget-content">
+            <ul class="post-list">
+                {% for post in site.posts limit:5 %}
+                <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div class="widget">
+        <div class="widget-title">
+            Authors
+        </div>
+        <div class="widget-content">
+            {% include author_list.html %}
+        </div>
+    </div>
+
+    <div>
+    <div class="widget">
+        <div class="widget-title">
+            Sponsors
+        </div>
+        <div class="widget-content">
+            {% include ads/sidebar_ad.html %}
+        </div>
+    </div></div>
+</div>

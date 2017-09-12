@@ -1,0 +1,28 @@
+<nav id="mainNav" class="navbar navbar-toggleable-md">
+    <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#containerNavbar" aria-controls="containerNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="icon-menu"></i>
+        </button>
+        <a class="navbar-brand animsition-link" href="{{ site.baseurl | replace: '//', '/' }}/"><img src="{{ site.baseurl | replace: '//', '/' }}/images/logo.png" alt="FWPolice" /></a>
+
+        <div class="collapse navbar-collapse" id="containerNavbar">
+            <ul class="navbar-nav ml-auto justify-content-end">
+                <li class="nav-item {% if current[1] == 'product' %}templates{% endif %}">
+                    <a href="{{ site.url }}/templates" class="animsition-link">Templates</a>
+                </li>
+                <li class="nav-item {% if current[1] == 'clients' %}designs{% endif %}">
+                    <a href="{{ site.url }}/designs" class="animsition-link">Designs</a>
+                </li>
+                <li class="nav-item {% if current[1] == 'pricing' %}coding{% endif %}">
+                    <a href="{{ site.url }}/coding" class="animsition-link">Coding</a>
+                </li>
+                <li class="nav-item {% if current[1] == 'pricing' %}blog{% endif %}">
+                    <a href="{{ site.url }}/blog" class="animsition-link">Blog</a>
+                </li>
+                <li class="nav-item {% if current[1] == 'pricing' %}submit{% endif %}">
+                    <a href="{{ site.url }}/submit" class="button animsition-link">Submit</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
